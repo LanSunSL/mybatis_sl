@@ -1,0 +1,9 @@
+2017-05-16 14:30:08,807 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: INSERT INTO member(mid,name,age,salary,birthday,note) VALUES (?,?,?,?,?,?) ; 
+2017-05-16 14:30:09,007 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: mldn - 360(String), 测试名字(String), 19(Integer), 1.1(Double), 2017-05-16 14:30:08.525(Timestamp), 是个好人。(String)
+2017-05-16 14:30:09,009 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-16 15:23:04,082 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: INSERT INTO member(mid,name,age,salary,birthday,note) VALUES (?,?,?,?,?,?) ; 
+2017-05-16 15:23:04,250 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: mldn - 926(String), 测试名字(String), 19(Integer), 1.1(Double), 2017-05-16 15:23:03.683(Timestamp), 是个好人。(String)
+2017-05-16 15:23:04,253 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
+2017-05-16 15:24:54,074 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==>  Preparing: INSERT INTO member(mid,name,age,salary,birthday,note) VALUES (?,?,?,?,?,?) ; 
+2017-05-16 15:24:54,270 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - ==> Parameters: mldn - 964(String), 测试名字(String), 19(Integer), 1.1(Double), 2017-05-16 15:24:52.963(Timestamp), 是个好人。(String)
+2017-05-16 15:24:54,272 DEBUG [cn.mldn.mapping.MemberNS.doCreate] - <==    Updates: 1
