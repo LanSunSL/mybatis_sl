@@ -12,4 +12,7 @@
 			</dataSource>
 		</environment>
 	</environments>
+	<mappers> <!-- 定义所有的映射文件路径 -->
+		<mapper resource="cn/mldn/mybatisdemo/mapping/Member.xml" />
+	</mappers>
 </configuration>
