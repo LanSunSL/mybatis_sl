@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<!-- 本项目util配置 -->
+		<!-- 本项目版本控制 -->
 		<mybatisdemo.version>0.0.1</mybatisdemo.version>
 		<!-- mybatis配置包 -->
 		<mybatis.version>3.4.4</mybatis.version>
@@ -82,6 +82,11 @@
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
 				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
 			</dependency>
 			
 			<dependency>
@@ -156,11 +161,7 @@
 				<version>${mchange.version}</version>
 			</dependency>
 			
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>
-			</dependency>
+			
 
 			<dependency>
 				<groupId>junit</groupId>
@@ -248,4 +249,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<modules>
+		<module>mybatisdemo-base</module>
+    <module>mybatisdemo-util</module>
+  </modules>
 </project>
