@@ -251,6 +251,7 @@
 	</build>
 	<modules>
 		<module>mybatisdemo-base</module>
-    <module>mybatisdemo-util</module>
-  </modules>
+    	<module>mybatisdemo-util</module>
+    	<module>mybatisdemo-crud</module>
+	</modules>
 </project>
