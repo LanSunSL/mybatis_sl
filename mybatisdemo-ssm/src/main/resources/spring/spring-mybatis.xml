@@ -9,6 +9,14 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
+	<!-- 定义Spring与MyBatis整合的操作控制，此时数据库的连接对象取得由Spring负责 -->
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- Mybatis操作需要有数据库连接池的支持，所以此处将之前配置的C3P0的连接池设置到此类之中 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 配置所有资源文件的保存路径的资源匹配符 -->
+		<property name="configLocation" value="classpath:mybatis/mybatis.cfg.xml" />
+	</bean>
+
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="${db.driverClass}" />	<!-- 数据库的连接驱动程序 -->
 		<property name="jdbcUrl" value="${db.jdbcUrl}" />	<!-- 数据库的连接地址信息 -->
