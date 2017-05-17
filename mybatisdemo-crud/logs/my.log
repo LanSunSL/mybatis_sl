@@ -19,3 +19,6 @@
 2017-05-17 09:44:30,771 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==>  Preparing: UPDATE news SET title=?,note=? WHERE nid=? 
 2017-05-17 09:44:30,873 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==> Parameters: abcdefg(String), hahahaha(String), 13(Long)
 2017-05-17 09:44:30,875 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - <==    Updates: 1
+2017-05-17 09:48:53,465 DEBUG [cn.mldn.mapping.NewsNS.doRemove] - ==>  Preparing: DELETE FROM news WHERE nid=? 
+2017-05-17 09:48:53,567 DEBUG [cn.mldn.mapping.NewsNS.doRemove] - ==> Parameters: 8(Long)
+2017-05-17 09:48:53,569 DEBUG [cn.mldn.mapping.NewsNS.doRemove] - <==    Updates: 1

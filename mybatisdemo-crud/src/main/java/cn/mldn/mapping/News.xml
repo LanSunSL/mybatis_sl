@@ -8,4 +8,7 @@
 	<update id="doUpdate" parameterType="News" >
 		UPDATE news SET title=#{title},note=#{note} WHERE nid=#{nid}
 	</update>
+	<delete id="doRemove" parameterType="long">
+		DELETE FROM news WHERE nid=#{nid}
+	</delete>
 </mapper>

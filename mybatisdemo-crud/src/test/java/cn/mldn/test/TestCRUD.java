@@ -31,5 +31,12 @@ public class TestCRUD {
 		System.out.println(vo);
 		TestCase.assertTrue(count == 1);
 	}
-
+	@Test
+	public void testDelete() {
+		int count = MyBatisSessionFactory.getSession().delete("cn.mldn.mapping.NewsNS.doRemove", 8L);
+		MyBatisSessionFactory.getSession().commit();
+		MyBatisSessionFactory.close();
+		System.out.println(count);
+		TestCase.assertEquals(count, 1);
+	}
 }
