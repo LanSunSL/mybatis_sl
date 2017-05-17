@@ -28,7 +28,7 @@ public class NewsServiceImpl implements INewsService {
 		map.put("keyWord", "%" + keyWord +"%");
 		map.put("start", (currentPage -1) * lineSize);
 		map.put("lineSize", lineSize);
-		return this.newsDAO.findAllBySplit(map);
+		return this.newsDAO.findAllSplit(map);
 	}
 
 }

@@ -26,7 +26,7 @@ public class TestNewsService {
 	@Test
 	public void testAdd() {
 		News vo = new News();
-		vo.setNote("dodod");
+		vo.setNote("*****dodod");
 		vo.setTitle("xyxyxxy");
 		TestCase.assertTrue(this.newsService.add(vo));
 	}

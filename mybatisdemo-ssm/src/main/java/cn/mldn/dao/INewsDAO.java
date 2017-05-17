@@ -7,5 +7,5 @@ import cn.mldn.vo.News;
 
 public interface INewsDAO {
 	public boolean doCreate(News vo);
-	public List<News> findAllBySplit(Map<String, Object> map);
+	public List<News> findAllSplit(Map<String, Object> map);
 }

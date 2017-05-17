@@ -13,8 +13,17 @@
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- Mybatis操作需要有数据库连接池的支持，所以此处将之前配置的C3P0的连接池设置到此类之中 -->
 		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:cn/mldn/mapping/*.xml"/>
 		<!-- 配置所有资源文件的保存路径的资源匹配符 -->
 		<property name="configLocation" value="classpath:mybatis/mybatis.cfg.xml" />
+	</bean>
+
+	<!-- 定义数据层子类的自动实现控制，这样才可以将DAO接口与映射文件整合在一起，该bean不需要做引用 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 存放在cn.mldn.dao下的包接口才可以被自动的映射实现子类 -->
+		<property name="basePackage" value="cn.mldn.dao" />
+		<!-- 定义本次要使用的SessionFactory类型的对象，直接以Bean的名称进行导入 -->
+		<property name="sqlSessionFactoryBeanName" value="sessionFactory" />
 	</bean>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
