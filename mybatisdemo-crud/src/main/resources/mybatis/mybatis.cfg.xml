@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd"> <!-- XML配置文件根节点，表示要进行mybatis的相关配置 -->
 <configuration>
+	<typeAliases>
+		<typeAlias type="cn.mldn.vo.News" alias="News"/>
+	</typeAliases>
 	<environments default="development"> <!-- 配置数据源的相关信息 -->
 		<environment id="development">
 			<transactionManager type="jdbc" /> <!-- 使用JDBC方式管理 -->
@@ -12,7 +15,7 @@
 			</dataSource>
 		</environment>
 	</environments>
-	<mappers> <!-- 定义所有的映射文件路径 -->
-		<mapper resource="cn/mldn/mybatisdemo/mapping/Member.xml" />
+	<mappers>
+		<mapper resource="cn/mldn/mapping/News.xml"/>
 	</mappers>
 </configuration>
