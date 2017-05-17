@@ -57,3 +57,40 @@
 2017-05-17 10:03:38,284 TRACE [cn.mldn.mapping.NewsNS.findMap] - <==        Row: 12, user, <<BLOB>>
 2017-05-17 10:03:38,285 TRACE [cn.mldn.mapping.NewsNS.findMap] - <==        Row: 13, abcdefg, <<BLOB>>
 2017-05-17 10:03:38,285 DEBUG [cn.mldn.mapping.NewsNS.findMap] - <==      Total: 11
+2017-05-17 13:34:33,601 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==>  Preparing: SELECT nid,title,note FROM news WHERE title LIKE ? AND LIMIT ?,? 
+2017-05-17 13:34:33,946 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==> Parameters: o(String), 1(Integer), 10(Integer)
+2017-05-17 13:35:46,415 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==>  Preparing: SELECT nid,title,note FROM news WHERE title LIKE ? LIMIT ?,? 
+2017-05-17 13:35:46,580 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==> Parameters: o(String), 1(Integer), 10(Integer)
+2017-05-17 13:35:46,723 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - <==      Total: 0
+2017-05-17 13:35:46,725 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==>  Preparing: SELECT COUNT(*) FROM news WHERE title LIKE ? 
+2017-05-17 13:35:46,810 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==> Parameters: o(String)
+2017-05-17 13:35:46,817 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==    Columns: COUNT(*)
+2017-05-17 13:35:46,818 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==        Row: 0
+2017-05-17 13:35:46,820 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - <==      Total: 1
+2017-05-17 13:36:18,151 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==>  Preparing: SELECT nid,title,note FROM news WHERE title LIKE ? LIMIT ?,? 
+2017-05-17 13:36:18,261 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==> Parameters: o(String), 1(Integer), 10(Integer)
+2017-05-17 13:36:18,368 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - <==      Total: 0
+2017-05-17 13:36:18,372 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==>  Preparing: SELECT COUNT(*) FROM news WHERE title LIKE ? 
+2017-05-17 13:36:18,375 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==> Parameters: o(String)
+2017-05-17 13:36:18,378 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==    Columns: COUNT(*)
+2017-05-17 13:36:18,378 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==        Row: 0
+2017-05-17 13:36:18,383 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - <==      Total: 1
+2017-05-17 13:36:53,831 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==>  Preparing: SELECT nid,title,note FROM news WHERE title LIKE ? LIMIT ?,? 
+2017-05-17 13:36:54,023 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==> Parameters: u(String), 1(Integer), 10(Integer)
+2017-05-17 13:36:54,107 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - <==      Total: 0
+2017-05-17 13:36:54,111 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==>  Preparing: SELECT COUNT(*) FROM news WHERE title LIKE ? 
+2017-05-17 13:36:54,112 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==> Parameters: u(String)
+2017-05-17 13:36:54,114 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==    Columns: COUNT(*)
+2017-05-17 13:36:54,114 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==        Row: 0
+2017-05-17 13:36:54,119 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - <==      Total: 1
+2017-05-17 13:37:18,883 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==>  Preparing: SELECT nid,title,note FROM news WHERE title LIKE ? LIMIT ?,? 
+2017-05-17 13:37:18,978 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - ==> Parameters: %u%(String), 1(Integer), 10(Integer)
+2017-05-17 13:37:19,074 TRACE [cn.mldn.mapping.NewsNS.findAllSplit] - <==    Columns: nid, title, note
+2017-05-17 13:37:19,074 TRACE [cn.mldn.mapping.NewsNS.findAllSplit] - <==        Row: 11, user, <<BLOB>>
+2017-05-17 13:37:19,089 TRACE [cn.mldn.mapping.NewsNS.findAllSplit] - <==        Row: 12, user, <<BLOB>>
+2017-05-17 13:37:19,089 DEBUG [cn.mldn.mapping.NewsNS.findAllSplit] - <==      Total: 2
+2017-05-17 13:37:19,092 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==>  Preparing: SELECT COUNT(*) FROM news WHERE title LIKE ? 
+2017-05-17 13:37:19,093 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - ==> Parameters: %u%(String)
+2017-05-17 13:37:19,094 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==    Columns: COUNT(*)
+2017-05-17 13:37:19,094 TRACE [cn.mldn.mapping.NewsNS.getAllCount] - <==        Row: 3
+2017-05-17 13:37:19,096 DEBUG [cn.mldn.mapping.NewsNS.getAllCount] - <==      Total: 1

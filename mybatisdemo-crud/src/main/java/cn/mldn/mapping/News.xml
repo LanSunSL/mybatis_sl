@@ -20,4 +20,10 @@
 	<select id="findMap" resultType="map">
 		SELECT nid,title,note FROM news
 	</select>
+	<select id="findAllSplit" parameterType="map" resultType="News">
+		SELECT nid,title,note FROM news WHERE ${column} LIKE #{keyWord} LIMIT #{start},#{lineSize}
+	</select>
+	<select id="getAllCount" parameterType="map" resultType="long">
+		SELECT COUNT(*) FROM news WHERE ${column} LIKE #{keyWord}
+	</select>
 </mapper>

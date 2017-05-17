@@ -1,6 +1,8 @@
 package cn.mldn.test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -56,5 +58,18 @@ public class TestCRUD {
 	@Test
 	public void testMap() {
 		System.out.println(MyBatisSessionFactory.getSession().selectMap("cn.mldn.mapping.NewsNS.findMap", "nid"));
+	}
+	@Test
+	public void testSplitAndCount() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("column", "title");
+		map.put("keyWord", "%u%");
+		map.put("start", 1);
+		map.put("lineSize", 10);
+		List<News> all = MyBatisSessionFactory.getSession().selectList("cn.mldn.mapping.NewsNS.findAllSplit", map);
+		long count = MyBatisSessionFactory.getSession().selectOne("cn.mldn.mapping.NewsNS.getAllCount", map);
+		System.out.println(all);
+		System.out.println(count);
+		TestCase.assertTrue(all.size() > 0 && count > 0);
 	}
 }
