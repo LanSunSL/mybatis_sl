@@ -11,4 +11,13 @@
 	<delete id="doRemove" parameterType="long">
 		DELETE FROM news WHERE nid=#{nid}
 	</delete>
+	<select id="findById" parameterType="long" resultType="News">
+		SELECT nid,title,note FROM news WHERE nid=#{nid}
+	</select>
+	<select id="findAll" resultType="News">
+		SELECT nid,title,note FROM news
+	</select>
+	<select id="findMap" resultType="map">
+		SELECT nid,title,note FROM news
+	</select>
 </mapper>

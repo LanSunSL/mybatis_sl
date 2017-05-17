@@ -1,5 +1,7 @@
 package cn.mldn.test;
 
+import java.util.List;
+
 import org.junit.Test;
 
 import cn.mldn.util.MyBatisSessionFactory;
@@ -38,5 +40,21 @@ public class TestCRUD {
 		MyBatisSessionFactory.close();
 		System.out.println(count);
 		TestCase.assertEquals(count, 1);
+	}
+	@Test
+	public void testGet() {
+		News vo = MyBatisSessionFactory.getSession().selectOne("cn.mldn.mapping.NewsNS.findById", 12L);
+		System.out.println(vo);
+		TestCase.assertTrue(vo != null);
+	}
+	@Test
+	public void testList() {
+		List<News> all = MyBatisSessionFactory.getSession().selectList("cn.mldn.mapping.NewsNS.findAll");
+		System.out.println(all);
+		TestCase.assertTrue(all.size() > 0);
+	}
+	@Test
+	public void testMap() {
+		System.out.println(MyBatisSessionFactory.getSession().selectMap("cn.mldn.mapping.NewsNS.findMap", "nid"));
 	}
 }
