@@ -16,7 +16,7 @@ public class TestCRUD {
 		int count = MyBatisSessionFactory.getSession().insert("cn.mldn.mapping.NewsNS.doCreate", vo);
 		MyBatisSessionFactory.getSession().commit();
 		MyBatisSessionFactory.close();
-		System.out.println(count);
+		System.out.println(vo);
 		TestCase.assertTrue(count == 1);
 	}
 

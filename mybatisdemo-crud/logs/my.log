@@ -1,3 +1,9 @@
 2017-05-17 09:15:54,301 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==>  Preparing: INSERT INTO news (title,note) VALUES (?,?) 
 2017-05-17 09:15:54,398 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==> Parameters: user(String), shiro(String)
 2017-05-17 09:15:54,400 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - <==    Updates: 1
+2017-05-17 09:19:33,486 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==>  Preparing: INSERT INTO news (title,note) VALUES (?,?) 
+2017-05-17 09:19:33,584 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==> Parameters: user(String), shiro(String)
+2017-05-17 09:19:33,586 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - <==    Updates: 1
+2017-05-17 09:26:45,887 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==>  Preparing: INSERT INTO news (title,note) VALUES (?,?) 
+2017-05-17 09:26:46,015 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==> Parameters: user(String), shiro(String)
+2017-05-17 09:26:46,018 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - <==    Updates: 1
