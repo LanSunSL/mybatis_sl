@@ -7,3 +7,15 @@
 2017-05-17 09:26:45,887 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==>  Preparing: INSERT INTO news (title,note) VALUES (?,?) 
 2017-05-17 09:26:46,015 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - ==> Parameters: user(String), shiro(String)
 2017-05-17 09:26:46,018 DEBUG [cn.mldn.mapping.NewsNS.doCreate] - <==    Updates: 1
+2017-05-17 09:36:51,802 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==>  Preparing: UPDATE news SET title=? AND note=? WHERE nid=? 
+2017-05-17 09:36:51,902 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==> Parameters: abcdefg(String), hahahaha(String), 8(Long)
+2017-05-17 09:36:51,944 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - <==    Updates: 1
+2017-05-17 09:39:43,006 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==>  Preparing: UPDATE news SET title=? AND note=? WHERE nid=? 
+2017-05-17 09:39:43,205 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==> Parameters: abcdefg(String), hahahaha(String), 8(Long)
+2017-05-17 09:39:43,210 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - <==    Updates: 1
+2017-05-17 09:42:22,884 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==>  Preparing: UPDATE news SET title=? AND note=? WHERE nid=? 
+2017-05-17 09:42:23,076 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==> Parameters: abcdefg(String), hahahaha(String), 13(Long)
+2017-05-17 09:42:23,093 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - <==    Updates: 1
+2017-05-17 09:44:30,771 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==>  Preparing: UPDATE news SET title=?,note=? WHERE nid=? 
+2017-05-17 09:44:30,873 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - ==> Parameters: abcdefg(String), hahahaha(String), 13(Long)
+2017-05-17 09:44:30,875 DEBUG [cn.mldn.mapping.NewsNS.doUpdate] - <==    Updates: 1

@@ -5,4 +5,7 @@
 	<insert id="doCreate" parameterType="News" keyProperty="nid" useGeneratedKeys="true" >
 		INSERT INTO news (title,note) VALUES (#{title},#{note})
 	</insert>
+	<update id="doUpdate" parameterType="News" >
+		UPDATE news SET title=#{title},note=#{note} WHERE nid=#{nid}
+	</update>
 </mapper>

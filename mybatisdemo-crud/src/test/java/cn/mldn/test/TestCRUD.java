@@ -19,5 +19,17 @@ public class TestCRUD {
 		System.out.println(vo);
 		TestCase.assertTrue(count == 1);
 	}
+	@Test
+	public void testUpdate() {
+		News vo = new News();
+		vo.setNid(13L);
+		vo.setTitle("abcdefg");
+		vo.setNote("hahahaha");
+		int count = MyBatisSessionFactory.getSession().update("cn.mldn.mapping.NewsNS.doUpdate", vo);
+		MyBatisSessionFactory.getSession().commit();
+		MyBatisSessionFactory.close();
+		System.out.println(vo);
+		TestCase.assertTrue(count == 1);
+	}
 
 }
