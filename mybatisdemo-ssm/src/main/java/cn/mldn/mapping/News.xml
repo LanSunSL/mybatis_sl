@@ -5,7 +5,10 @@
 	<insert id="doCreate" parameterType="News" keyProperty="nid" useGeneratedKeys="true" >
 		INSERT INTO news (title,note) VALUES (#{title},#{note})
 	</insert>
-	<update id="doUpdate" parameterType="News" >
+	<select id="findAllSplit" parameterType="map" resultType="News">
+		SELECT nid,title,note FROM news WHERE ${column} LIKE #{keyWord} LIMIT #{start},#{lineSize}
+	</select>
+	<!-- <update id="doUpdate" parameterType="News" >
 		UPDATE news SET title=#{title},note=#{note} WHERE nid=#{nid}
 	</update>
 	<delete id="doRemove" parameterType="long">
@@ -20,10 +23,8 @@
 	<select id="findMap" resultType="map">
 		SELECT nid,title,note FROM news
 	</select>
-	<select id="findAllSplit" parameterType="map" resultType="News">
-		SELECT nid,title,note FROM news WHERE ${column} LIKE #{keyWord} LIMIT #{start},#{lineSize}
-	</select>
+	
 	<select id="getAllCount" parameterType="map" resultType="long">
 		SELECT COUNT(*) FROM news WHERE ${column} LIKE #{keyWord}
-	</select>
+	</select> -->
 </mapper>

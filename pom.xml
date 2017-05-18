@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.mldn</groupId>
 	<artifactId>mybatisdemo</artifactId>
@@ -51,6 +50,11 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>cn.mldn</groupId>
+				<artifactId>mybatisdemo-ssm</artifactId>
+				<version>${mybatisdemo.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>cn.mldn</groupId>
 				<artifactId>mybatisdemo-util</artifactId>
@@ -259,5 +263,6 @@
 		<module>mybatisdemo-util</module>
 		<module>mybatisdemo-crud</module>
 		<module>mybatisdemo-ssm</module>
-	</modules>
+    <module>mybatisdemo-web</module>
+  </modules>
 </project>
